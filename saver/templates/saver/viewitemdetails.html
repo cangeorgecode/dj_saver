@@ -1,0 +1,15 @@
+{% extends 'saver/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container pt-4 text-center">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" id="button">Update</button>
+    </form>
+    <div class="container pt-2">
+        <a href="{% url 'viewitem' %}" class="btn btn-secondary">Back</a>
+    </div>
+    
+</div>
+{% endblock content %}
